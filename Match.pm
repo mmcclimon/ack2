@@ -10,7 +10,7 @@ sub new {
     my ( $class, $re ) = @_;
 
     $re =~ s{^/|/$}{}g; # XXX validate?
-    $re = qr/$re/i;
+    $re = qr/$re/io;
 
     return bless {
         regex => $re,

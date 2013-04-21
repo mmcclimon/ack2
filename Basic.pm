@@ -124,7 +124,7 @@ the text.  This basically emulates a call to C<< <$fh> >>.
 
 sub next_text {
     if ( defined ($_ = readline $_[0]->{fh}) ) {
-        $. = ++$_[0]->{line};
+        #$. = ++$_[0]->{line};
 
         my $line_end = substr $_, -1;
         while ($line_end eq "\n" || $line_end eq "\r") {
